@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:orderstage/core/routes/routes.dart';
-import '../../view/home/view/home_page.dart';
-import '../../view/login/view/login_page.dart';
+import '../../view/staff/view/staff_page.dart';
+import '../../view/registration/view/registration_page.dart';
 import '../../view/splash/splash_view.dart';
 
 class RouteGenerator {
@@ -10,7 +11,7 @@ class RouteGenerator {
       case NamedRoutes.splash:
         return MaterialPageRoute(builder: (_) => const SplashView());
       case NamedRoutes.main:
-        return MaterialPageRoute(builder: (_) => const HomePage());
+        return MaterialPageRoute(builder: (_) => const StaffPage());
       case NamedRoutes.registration:
         return MaterialPageRoute(builder: (_) => const Registration());
       default:

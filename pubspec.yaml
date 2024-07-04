@@ -13,8 +13,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.6
   internet_connection_checker: ^1.0.0+1
-  sizer: ^2.0.15
-
+  equatable: ^2.0.5
 dev_dependencies:
   flutter_test:
     sdk: flutter

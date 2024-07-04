@@ -17,17 +17,20 @@ class SplashView extends StatefulWidget {
 class SplashState extends State<SplashView> {
   Timer? _timer;
   final int splashDelay = 4;
+
+// Timer that triggers _goNext after splashDelay
   _startDelay() {
     _timer = Timer(Duration(seconds: splashDelay), _goNext);
   }
 
+// Navigation to the registration route
   _goNext() async {
-     await push(NamedRoutes.registration);
+    await push(NamedRoutes.registration);
   }
 
   @override
   void initState() {
-    super.initState();
+    super.initState(); // Starting the delay timer when the state is initialized
     _startDelay();
   }
 
@@ -43,7 +46,7 @@ class SplashState extends State<SplashView> {
 
   @override
   void dispose() {
-    _timer?.cancel();
+    _timer?.cancel(); // Cancelling the timer if it's active
     super.dispose();
   }
 }
